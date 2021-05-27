@@ -23,6 +23,7 @@ namespace CSDLPT_Nhom1.Models
         public DbSet<ChiTietSanPham> ChiTietSanPhams { get; set; }
         public DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
         public DbSet<SanPham> SanPhams { get; set; }
+        public DbSet<NhanVien> NhanViens { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,7 +1,7 @@
  CREATE OR ALTER PROCEDURE sp_CRUDHoaDon(
 									@MaHD INT,
 									@MaNV       INT,
-									@MaKH    INT,    
+									@TenKH    NVARCHAR(20),    
 									@NgayMua       DATE,
 									@TamTinh    DECIMAL(18,0),    
 									@GiamGia       INT,
@@ -14,8 +14,8 @@ AS
       IF @StatementType = 'Insert'  
         BEGIN  
             INSERT INTO HoaDon  
-                        (MaNV, MaKH, NgayMua, TamTinh, GiamGia, TongTien)
-            VALUES     (@MaNV, @MaKH, @NgayMua, @TamTinh, @GiamGia, @TongTien)
+                        (MaNV, TenKH, NgayMua, TamTinh, GiamGia, TongTien)
+            VALUES     (@MaNV, @TenKH, @NgayMua, @TamTinh, @GiamGia, @TongTien)
 						
         END  
   
@@ -30,7 +30,7 @@ AS
         BEGIN  
             UPDATE HoaDon  
             SET    MaNV = @MaNV,
-					MaKH = @MaKH,
+					@TenKH = @TenKH,
 					NgayMua = @NgayMua,
 					TamTinh = @TamTinh,
 					GiamGia = @GiamGia,

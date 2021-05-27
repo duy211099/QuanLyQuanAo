@@ -22,3 +22,10 @@ D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\bin\Debug\System.Configuration.Configu
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\bin\Debug\System.Security.AccessControl.xml
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\bin\Debug\System.Security.Permissions.xml
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\bin\Debug\System.Security.Principal.Windows.xml
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.LoginFrm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.NhanVienForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.Form4.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.Form5.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.HoaDonForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.NhanVienHoaDonForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.ChiTietHoaDonForm.resources

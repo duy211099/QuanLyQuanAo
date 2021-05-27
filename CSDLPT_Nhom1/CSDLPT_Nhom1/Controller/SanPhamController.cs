@@ -20,7 +20,7 @@ namespace CSDLPT_Nhom1.Controller
                 Gia=x.Gia,
                 TrangThai=x.TrangThai,
                 MoTa=x.MoTa
-            }).ToList();
+            }).OrderBy(x=>x.Ten).ToList();
         }
     }
 }

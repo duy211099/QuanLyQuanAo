@@ -17,7 +17,7 @@ namespace CSDLPT_Nhom1.Services
         // LoginModel
         public Login GetLoginInfo(string loginName)
         {
-            return _unitOfWork.SprocQuery<Login>("sp_GetLoginInfo", new object[] { loginName }).FirstOrDefault();
+            return _unitOfWork.SprocQuery<Login>("sp_GetLoginInfoo", new object[] { loginName }).FirstOrDefault();
         }
     }
 }

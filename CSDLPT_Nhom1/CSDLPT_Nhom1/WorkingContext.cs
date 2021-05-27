@@ -11,11 +11,11 @@ namespace CSDLPT_Nhom1
     public sealed class WorkingContext
     {
         private static WorkingContext _instance = null;
-        public static WorkingContext Instance => _instance ?? (_instance = new WorkingContext());
-
         private ShopContext _dbContext = null;
         private IUnitOfWork _unitOfWork;
         private string _currentConnectionString;
+        public static WorkingContext Instance => _instance ?? (_instance = new WorkingContext());
+
 
         // LoginModel
         public Login CurrentLoginInfo { get; set; }
@@ -43,6 +43,7 @@ namespace CSDLPT_Nhom1
 
         public ShopContext GetDbContext()
         {
-            return _dbContext;        }
+            return _dbContext;        
+        }
     }
 }

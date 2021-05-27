@@ -12,6 +12,8 @@ namespace CSDLPT_Nhom1.Models
         public string ChiNhanh{ get; set; }
         public string Ten { get; set; }
         public string Size { get; set; }
+        public string LoaiSanPhamCha { get; set; }
+        public string LoaiSanPham { get; set; }
         public decimal Gia { get; set; }
         public int SoLuong { get; set; }
     }
