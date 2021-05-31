@@ -36,6 +36,7 @@ namespace CSDLPT_Nhom1
 
             ShowCategories();
             ShowSanPhams(ChiTietSanPhamController.GetSanPham());
+
         }
 
         private void ShowCategories()
@@ -76,6 +77,12 @@ namespace CSDLPT_Nhom1
                 //item.SubItems.Add(sanpham.LoaiSanPhamCha);
 
                 lvwSanPham.Items.Add(item);
+            }
+
+            for (int i = 0; i < lvwSanPham.Columns.Count; i++)
+            {
+
+                lvwSanPham.Columns[i].Width = -2;
             }
         }
 
@@ -196,6 +203,24 @@ namespace CSDLPT_Nhom1
                 ShowCategories();
                 ShowSanPhams(ChiTietSanPhamController.GetSanPham());
             }
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeForm f = new ThongKeForm();
+            f.ShowDialog();
+        }
+
+        private void tàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TaiKhoanForm f = new TaiKhoanForm();
+            f.ShowDialog();
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapNhatForm f = new CapNhatForm();
+            f.ShowDialog();
         }
     }
 }

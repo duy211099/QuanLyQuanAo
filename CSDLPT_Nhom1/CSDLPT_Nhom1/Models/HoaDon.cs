@@ -16,7 +16,7 @@ namespace CSDLPT_Nhom1.Models
         public string TenKH { get; set; }
         public string SDT { get; set; }
         public int GiamGia { get; set; }
-        public decimal TongTien { get; set; }
+        //public decimal TongTien { get; set; }
         public DateTime NgayMua { get; set; }
         //public decimal TamTinh { get; set; }
         //public int GiamGia { get; set; }

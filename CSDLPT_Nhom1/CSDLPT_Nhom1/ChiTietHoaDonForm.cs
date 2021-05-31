@@ -30,13 +30,25 @@ namespace CSDLPT_Nhom1
             lvwCTHoaDon.Items.Clear();
             foreach (var ct in cts)
             {
-                ListViewItem item = new ListViewItem(ct.Ten.ToString());
+                ListViewItem item = new ListViewItem(ct.MaSP.ToString());
+                item.SubItems.Add(ct.Ten.ToString());
                 item.SubItems.Add(ct.SoLuong.ToString());
                 item.SubItems.Add(ct.Size.ToString());
                 item.SubItems.Add(ct.TongTien.ToString());
 
                 lvwCTHoaDon.Items.Add(item);
             }
+
+            for (int i = 0; i < lvwCTHoaDon.Columns.Count; i++)
+            {
+
+                lvwCTHoaDon.Columns[i].Width = -2;
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

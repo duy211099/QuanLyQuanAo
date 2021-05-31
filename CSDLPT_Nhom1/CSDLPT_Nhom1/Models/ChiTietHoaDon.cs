@@ -11,6 +11,7 @@ namespace CSDLPT_Nhom1.Models
     {
         [Key]
         public int MaCTHD { get; set; }
+        public int MaSP { get; set; }
         public int MaHD { get; set; }
         public string Ten { get; set; }
         public string Size{ get; set; }

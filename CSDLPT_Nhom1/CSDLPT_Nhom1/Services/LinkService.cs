@@ -16,7 +16,7 @@ namespace CSDLPT_Nhom1.Services
         }
         public List<NhanVien> GetAllFromRemote()
         {
-            var ngu = _unitOfWork.SprocQuery<NhanVien>("sp_GetAllNV", new object[] { }).ToList();
+            var ngu = _unitOfWork.SprocQuery<NhanVien>("sp_GetAllNVCN", new object[] { }).ToList();
             return ngu;
         }
         public Login GetLoginInfo(string loginName)

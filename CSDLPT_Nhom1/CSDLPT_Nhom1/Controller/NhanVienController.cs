@@ -12,14 +12,14 @@ namespace CSDLPT_Nhom1.Controller
         public static List<NhanVien> GetNhanVien()
         {
             var dbContext = WorkingContext.Instance.GetDbContext();
-            
-            return dbContext.NhanViens.ToList();
+
+            return dbContext.NhanViens.SqlQuery("SELECT * FROM NhanVien WHERE TrangThai=1").ToList();
         }
         public static List<NhanVien> GetNhanVienRemote()
         {
             var dbContext = WorkingContext.Instance.GetDbContext();
 
-            return dbContext.NhanViens.SqlQuery("SELECT * FROM LINK.CSDLPT.dbo.NhanVien").ToList();
+            return dbContext.NhanViens.SqlQuery("SELECT * FROM LINK.CSDLPT1.dbo.NhanVien WHERE TrangThai=1").ToList(); 
         }
     }
 }

@@ -29,19 +29,6 @@
 		private void InitializeComponent()
 		{
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lvwHoaDon = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,12 +36,20 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbbCN = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,113 +70,61 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 350);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(858, 153);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm theo điều kiện";
+            this.groupBox1.Visible = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // lvwHoaDon
             // 
-            this.button1.Location = new System.Drawing.Point(734, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lvwHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvwHoaDon.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvwHoaDon.HideSelection = false;
+            this.lvwHoaDon.Location = new System.Drawing.Point(8, 36);
+            this.lvwHoaDon.Name = "lvwHoaDon";
+            this.lvwHoaDon.Size = new System.Drawing.Size(857, 294);
+            this.lvwHoaDon.TabIndex = 1;
+            this.lvwHoaDon.UseCompatibleStateImageBehavior = false;
+            this.lvwHoaDon.View = System.Windows.Forms.View.Details;
             // 
-            // comboBox2
+            // columnHeader1
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(594, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 11;
+            this.columnHeader1.Text = "ID";
             // 
-            // comboBox1
+            // columnHeader2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(594, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 10;
+            this.columnHeader2.Text = "Mã NV";
+            this.columnHeader2.Width = 80;
             // 
-            // textBox2
+            // columnHeader3
             // 
-            this.textBox2.Location = new System.Drawing.Point(337, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 22);
-            this.textBox2.TabIndex = 9;
+            this.columnHeader3.Text = "Tên NV";
+            this.columnHeader3.Width = 80;
             // 
-            // textBox1
+            // columnHeader4
             // 
-            this.textBox1.Location = new System.Drawing.Point(336, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 22);
-            this.textBox1.TabIndex = 8;
+            this.columnHeader4.Text = "Tên KH";
+            this.columnHeader4.Width = 80;
             // 
-            // dateTimePicker2
+            // columnHeader5
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(97, 79);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(135, 22);
-            this.dateTimePicker2.TabIndex = 7;
+            this.columnHeader5.Text = "SĐT";
+            this.columnHeader5.Width = 80;
             // 
-            // dateTimePicker1
+            // columnHeader6
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(97, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(135, 22);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(531, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Lập bởi";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(530, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Trạng thái";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(258, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Số điện thoại";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Khách hàng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Đến ngày";
+            this.columnHeader6.Text = "Ngày mua";
+            this.columnHeader6.Width = 80;
             // 
             // label1
             // 
@@ -192,90 +135,124 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lập từ ngày";
             // 
-            // lvwHoaDon
+            // label2
             // 
-            this.lvwHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.lvwHoaDon.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvwHoaDon.HideSelection = false;
-            this.lvwHoaDon.Location = new System.Drawing.Point(13, 172);
-            this.lvwHoaDon.Name = "lvwHoaDon";
-            this.lvwHoaDon.Size = new System.Drawing.Size(857, 294);
-            this.lvwHoaDon.TabIndex = 1;
-            this.lvwHoaDon.UseCompatibleStateImageBehavior = false;
-            this.lvwHoaDon.View = System.Windows.Forms.View.Details;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Đến ngày";
             // 
-            // columnHeader1
+            // label3
             // 
-            this.columnHeader1.Text = "Mã đơn";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(258, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Khách hàng";
             // 
-            // columnHeader2
+            // label4
             // 
-            this.columnHeader2.Text = "Nhân viên";
-            this.columnHeader2.Width = 80;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(258, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Số điện thoại";
             // 
-            // columnHeader3
+            // label5
             // 
-            this.columnHeader3.Text = "Ngày hóa đơn";
-            this.columnHeader3.Width = 80;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(530, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Trạng thái";
             // 
-            // columnHeader4
+            // label6
             // 
-            this.columnHeader4.Text = "Khách hàng";
-            this.columnHeader4.Width = 80;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(531, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 15);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Lập bởi";
             // 
-            // columnHeader5
+            // dateTimePicker1
             // 
-            this.columnHeader5.Text = "Số điện thoại";
-            this.columnHeader5.Width = 80;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(97, 30);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(135, 22);
+            this.dateTimePicker1.TabIndex = 6;
             // 
-            // columnHeader6
+            // dateTimePicker2
             // 
-            this.columnHeader6.Text = "Tiền hàng";
-            this.columnHeader6.Width = 80;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(97, 79);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(135, 22);
+            this.dateTimePicker2.TabIndex = 7;
             // 
-            // columnHeader7
+            // textBox1
             // 
-            this.columnHeader7.Text = "Giảm giá";
+            this.textBox1.Location = new System.Drawing.Point(336, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(178, 22);
+            this.textBox1.TabIndex = 8;
             // 
-            // columnHeader8
+            // textBox2
             // 
-            this.columnHeader8.Text = "Phí ship";
+            this.textBox2.Location = new System.Drawing.Point(337, 82);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(177, 22);
+            this.textBox2.TabIndex = 9;
             // 
-            // columnHeader9
+            // comboBox1
             // 
-            this.columnHeader9.Text = "Tiền thuế";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(594, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 10;
             // 
-            // columnHeader10
+            // comboBox2
             // 
-            this.columnHeader10.Text = "Thành tiền";
-            this.columnHeader10.Width = 80;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(594, 81);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
+            this.comboBox2.TabIndex = 11;
             // 
-            // columnHeader11
+            // button1
             // 
-            this.columnHeader11.Text = "Trạng thái";
-            this.columnHeader11.Width = 80;
+            this.button1.Location = new System.Drawing.Point(734, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // columnHeader12
+            // cbbCN
             // 
-            this.columnHeader12.Text = "Xóa/hủy";
+            this.cbbCN.FormattingEnabled = true;
+            this.cbbCN.Items.AddRange(new object[] {
+            "Chi nhánh Bùi Thị Xuân",
+            "Chi nhánh Trần Phú"});
+            this.cbbCN.Location = new System.Drawing.Point(8, 12);
+            this.cbbCN.Name = "cbbCN";
+            this.cbbCN.Size = new System.Drawing.Size(163, 21);
+            this.cbbCN.TabIndex = 2;
+            this.cbbCN.SelectedIndexChanged += new System.EventHandler(this.cbbCN_SelectedIndexChanged);
             // 
             // HoaDonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 471);
+            this.ClientSize = new System.Drawing.Size(882, 357);
+            this.Controls.Add(this.cbbCN);
             this.Controls.Add(this.lvwHoaDon);
             this.Controls.Add(this.groupBox1);
             this.Name = "HoaDonForm";
@@ -290,19 +267,6 @@
 		#endregion
 
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.DateTimePicker dateTimePicker2;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ListView lvwHoaDon;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -310,11 +274,19 @@
 		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private System.Windows.Forms.ColumnHeader columnHeader5;
 		private System.Windows.Forms.ColumnHeader columnHeader6;
-		private System.Windows.Forms.ColumnHeader columnHeader7;
-		private System.Windows.Forms.ColumnHeader columnHeader8;
-		private System.Windows.Forms.ColumnHeader columnHeader9;
-		private System.Windows.Forms.ColumnHeader columnHeader10;
-		private System.Windows.Forms.ColumnHeader columnHeader11;
-		private System.Windows.Forms.ColumnHeader columnHeader12;
-	}
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbbCN;
+    }
 }

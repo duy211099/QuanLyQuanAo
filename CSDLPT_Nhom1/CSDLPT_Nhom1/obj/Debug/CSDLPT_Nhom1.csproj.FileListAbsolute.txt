@@ -29,3 +29,6 @@ D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.Form5.resources
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\Lab3.HoaDonForm.resources
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.NhanVienHoaDonForm.resources
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.ChiTietHoaDonForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.ThongKeForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.TaiKhoanForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.CapNhatForm.resources

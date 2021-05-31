@@ -1,6 +1,7 @@
 ﻿using CSDLPT_Nhom1;
 using CSDLPT_Nhom1.Controller;
 using CSDLPT_Nhom1.Models;
+using CSDLPT_Nhom1.Service;
 using CSDLPT_Nhom1.Services;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,14 @@ namespace Lab3
 
 		private void Form3_Load(object sender, EventArgs e)
 		{
-            cbbCN.SelectedIndex = 0;
+            if(WorkingContext.Instance.CurrentBranch=="Chi Nhánh Bùi Thị Xuân")
+            {
+                cbbCN.SelectedIndex = 0;
+            } else
+            {
+                cbbCN.SelectedIndex = 1;
+            }
+
             if (WorkingContext.Instance.CurrentLoginInfo.RoleName != "GIAMDOC") cbbCN.Enabled = false;
             
         }
@@ -47,6 +55,12 @@ namespace Lab3
                 item.SubItems.Add(nhanvien.DiaChi);
 
                 lvwNhanVien.Items.Add(item);
+            }
+
+            for (int i = 0; i < lvwNhanVien.Columns.Count; i++)
+            {
+
+                lvwNhanVien.Columns[i].Width = -2;
             }
         }
 
@@ -95,9 +109,14 @@ namespace Lab3
                 item.SubItems.Add(hoadon.TenKH.ToString());
                 item.SubItems.Add(hoadon.SDT.ToString());
                 item.SubItems.Add(hoadon.NgayMua.ToString());
-                item.SubItems.Add(hoadon.TongTien.ToString());
 
                 lvwHoaDon.Items.Add(item);
+            }
+
+            for (int i = 0; i < lvwHoaDon.Columns.Count; i++)
+            {
+
+                lvwHoaDon.Columns[i].Width = -2;
             }
         }
 
@@ -117,6 +136,23 @@ namespace Lab3
 
             ChiTietHoaDonForm f = new ChiTietHoaDonForm(cthd);
             f.ShowDialog();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (lvwNhanVien.SelectedItems.Count == 0)
+                return;
+
+            ListViewItem item = lvwNhanVien.SelectedItems[0];
+            string index = item.Text;
+            try
+            {
+                DemoService.XoaTaiKhoan(index);
+            }
+            catch { }            
+            ShowNhanVien(NhanVienController.GetNhanVien());
+            MessageBox.Show("Thành công\r\n", "Thông báo", MessageBoxButtons.OK);
+            ShowNhanVien(NhanVienController.GetNhanVien());
         }
     }
 }

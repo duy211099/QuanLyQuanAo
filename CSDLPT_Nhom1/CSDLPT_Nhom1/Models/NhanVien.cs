@@ -17,5 +17,6 @@ namespace CSDLPT_Nhom1.Models
         public DateTime NgaySinh { get; set; }
         public string SDT { get; set; }
         public string DiaChi { get; set; }
+        public string ChucVu { get; set; }
     }
 }

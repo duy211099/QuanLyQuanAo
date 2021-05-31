@@ -39,14 +39,49 @@ namespace Lab3
                 item.SubItems.Add(hoadon.TenKH.ToString());
                 item.SubItems.Add(hoadon.SDT.ToString());
                 item.SubItems.Add(hoadon.NgayMua.ToString());
-                item.SubItems.Add(hoadon.TongTien.ToString());
 
                 lvwHoaDon.Items.Add(item);
+            }
+
+            for (int i = 0; i < lvwHoaDon.Columns.Count; i++)
+            {
+
+                lvwHoaDon.Columns[i].Width = -2;
             }
         }
         private void HoaDonForm_Load(object sender, EventArgs e)
         {
             ShowHoaDons(hdService.GetAllHoaDon());
+
+            if (WorkingContext.Instance.CurrentBranch == "Chi Nhánh Bùi Thị Xuân")
+            {
+                cbbCN.SelectedIndex = 0;
+            }
+            else
+            {
+                cbbCN.SelectedIndex = 1;
+            }
+
+            if (WorkingContext.Instance.CurrentLoginInfo.RoleName != "GIAMDOC") cbbCN.Enabled = false;
+        }
+
+        private void cbbCN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbCN.SelectedIndex == 0)
+            {
+                ShowHoaDons(hdService.GetAllHoaDon());
+            }
+            else
+            {
+                try
+                {
+                    ShowHoaDons(hdService.GetAllHoaDonCN());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

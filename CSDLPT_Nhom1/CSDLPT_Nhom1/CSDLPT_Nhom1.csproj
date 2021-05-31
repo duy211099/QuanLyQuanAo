@@ -75,6 +75,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatForm.Designer.cs">
+      <DependentUpon>CapNhatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietHoaDonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,8 @@
       <DependentUpon>ChiTietHoaDonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\ChiTietSanPhamController.cs" />
+    <Compile Include="Models\ThongKe.cs" />
+    <Compile Include="Services\DemoService.cs" />
     <Compile Include="Controller\HoaDonController.cs" />
     <Compile Include="Controller\IRepository.cs" />
     <Compile Include="Controller\IUnitOfWork.cs" />
@@ -160,8 +168,24 @@
     <Compile Include="Services\ICrudService.cs" />
     <Compile Include="Services\LinkService.cs" />
     <Compile Include="Services\LoginService.cs" />
+    <Compile Include="Services\TaiKhoanService.cs" />
     <Compile Include="Services\TempService.cs" />
+    <Compile Include="TaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiKhoanForm.Designer.cs">
+      <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeForm.Designer.cs">
+      <DependentUpon>ThongKeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkingContext.cs" />
+    <EmbeddedResource Include="CapNhatForm.resx">
+      <DependentUpon>CapNhatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChiTietHoaDonForm.resx">
       <DependentUpon>ChiTietHoaDonForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +222,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TaiKhoanForm.resx">
+      <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeForm.resx">
+      <DependentUpon>ThongKeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

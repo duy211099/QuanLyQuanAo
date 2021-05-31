@@ -36,8 +36,6 @@ namespace CSDLPT_Nhom1
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +48,7 @@ namespace CSDLPT_Nhom1
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách đơn hàng";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lvwCTHoaDon
             // 
@@ -59,9 +58,7 @@ namespace CSDLPT_Nhom1
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
+            this.columnHeader10});
             this.lvwCTHoaDon.HideSelection = false;
             this.lvwCTHoaDon.Location = new System.Drawing.Point(6, 19);
             this.lvwCTHoaDon.Name = "lvwCTHoaDon";
@@ -76,32 +73,22 @@ namespace CSDLPT_Nhom1
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Mã hàng";
+            this.columnHeader7.Text = "Tên";
             this.columnHeader7.Width = 80;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Tên mặt hàng";
+            this.columnHeader8.Text = "Số lượng";
             this.columnHeader8.Width = 100;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Giá bán";
+            this.columnHeader9.Text = "Size";
             this.columnHeader9.Width = 100;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Số lượng";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Thành tiền";
-            this.columnHeader11.Width = 100;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Ghi chú";
-            this.columnHeader12.Width = 230;
+            this.columnHeader10.Text = "Giá";
             // 
             // ChiTietHoaDonForm
             // 
@@ -126,7 +113,5 @@ namespace CSDLPT_Nhom1
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
     }
 }

@@ -63,6 +63,7 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,7 +89,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(19, 312);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(759, 224);
             this.groupBox1.TabIndex = 0;
@@ -238,10 +239,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.cbbCN);
             this.groupBox3.Controls.Add(this.lvwNhanVien);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 242);
+            this.groupBox3.Location = new System.Drawing.Point(19, 13);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(759, 282);
             this.groupBox3.TabIndex = 1;
@@ -308,7 +310,7 @@
             this.groupBox2.Controls.Add(this.lvwHoaDon);
             this.groupBox2.Location = new System.Drawing.Point(778, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(443, 426);
+            this.groupBox2.Size = new System.Drawing.Size(462, 511);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách đơn hàng";
@@ -327,7 +329,7 @@
             this.lvwHoaDon.HideSelection = false;
             this.lvwHoaDon.Location = new System.Drawing.Point(6, 19);
             this.lvwHoaDon.Name = "lvwHoaDon";
-            this.lvwHoaDon.Size = new System.Drawing.Size(427, 401);
+            this.lvwHoaDon.Size = new System.Drawing.Size(447, 477);
             this.lvwHoaDon.TabIndex = 0;
             this.lvwHoaDon.UseCompatibleStateImageBehavior = false;
             this.lvwHoaDon.View = System.Windows.Forms.View.Details;
@@ -339,32 +341,42 @@
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Mã hàng";
+            this.columnHeader7.Text = "Mã NV";
             this.columnHeader7.Width = 80;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Tên mặt hàng";
+            this.columnHeader8.Text = "Tên Nhân Viên";
             this.columnHeader8.Width = 100;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Giá bán";
+            this.columnHeader9.Text = "Khách Hàng";
             this.columnHeader9.Width = 100;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Số lượng";
+            this.columnHeader10.Text = "SĐT";
             // 
             // columnHeader11
             // 
-            this.columnHeader11.Text = "Thành tiền";
+            this.columnHeader11.Text = "Ngày mua";
             this.columnHeader11.Width = 100;
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "Ghi chú";
+            this.columnHeader12.Text = "Tổng tiền";
             this.columnHeader12.Width = 230;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(644, 20);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(104, 23);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xóa Tài Khoản";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // NhanVienForm
             // 
@@ -422,5 +434,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
