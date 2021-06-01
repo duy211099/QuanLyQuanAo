@@ -21,7 +21,8 @@ namespace Lab3
         HoaDonService hdService;
 
         public NhanVienForm()
-		{			InitializeComponent();
+		{			
+            InitializeComponent();
 
             var unitOfWork = WorkingContext.Instance.GetUnitOfWork();
             linkService = new LinkService(unitOfWork);

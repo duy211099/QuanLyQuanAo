@@ -176,6 +176,12 @@
     <Compile Include="TaiKhoanForm.Designer.cs">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKeGiamDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeGiamDoc.Designer.cs">
+      <DependentUpon>ThongKeGiamDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongKeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </Compile>
     <EmbeddedResource Include="TaiKhoanForm.resx">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeGiamDoc.resx">
+      <DependentUpon>ThongKeGiamDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeForm.resx">
       <DependentUpon>ThongKeForm.cs</DependentUpon>

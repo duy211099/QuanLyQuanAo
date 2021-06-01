@@ -22,12 +22,13 @@ namespace CSDLPT_Nhom1
 
         private void TaiKhoanForm_Load(object sender, EventArgs e)
         {
-            ShowNhanVien(NhanVienController.GetNhanVien());
+            ShowNhanVien(DemoService.Read_SP<NhanVienKoTaiKhoan>("sp_NVKoTK"));
+            ShowNhanVienTaiKhoan(DemoService.Read_SP<NhanVienTaiKhoan>("sp_NVTaiKhoan"));
             InitCbbCV();
         }
 
 
-        private void ShowNhanVien(List<NhanVien> nhanviens)
+        private void ShowNhanVien(List<NhanVienKoTaiKhoan> nhanviens)
         {
             lvwNhanVien.Items.Clear();
             foreach (var nhanvien in nhanviens)
@@ -44,6 +45,28 @@ namespace CSDLPT_Nhom1
             {
 
                 lvwNhanVien.Columns[i].Width = -2;
+            }
+        }
+
+
+        private void ShowNhanVienTaiKhoan(List<NhanVienTaiKhoan> nhanviens)
+        {
+            lvwNVTK.Items.Clear();
+            foreach (var nhanvien in nhanviens)
+            {
+                ListViewItem item = new ListViewItem(nhanvien.MaNV.ToString());
+                item.SubItems.Add(nhanvien.Ten);
+                item.SubItems.Add(nhanvien.TenTK.ToString());
+                item.SubItems.Add(nhanvien.ChucVu.ToString());
+                item.SubItems.Add(nhanvien.MaCN.ToString()); ;
+
+                lvwNVTK.Items.Add(item);
+            }
+
+            for (int i = 0; i < lvwNVTK.Columns.Count; i++)
+            {
+
+                lvwNVTK.Columns[i].Width = -2;
             }
         }
 
@@ -77,26 +100,14 @@ namespace CSDLPT_Nhom1
                 DemoService.TaoTaiKhoan(txtTen.Text, txtMK.Text, txtMa.Text, (cbbCV.SelectedItem as dynamic).Value);
                 MessageBox.Show("Đã tạo thành công\r\n", "Thông báo", MessageBoxButtons.OK);
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Đã tạo thành công\r\n" , "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show(ex.Message+"\r\n" , "Thông báo", MessageBoxButtons.OK);
             }
+
+            ShowNhanVien(DemoService.Read_SP<NhanVienKoTaiKhoan>("sp_NVKoTK"));
+            ShowNhanVienTaiKhoan(DemoService.Read_SP<NhanVienTaiKhoan>("sp_NVTaiKhoan"));
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DemoService.XoaTaiKhoan(txtMa.Text);
-                ShowNhanVien(NhanVienController.GetNhanVien());
-                MessageBox.Show("Thành công\r\n", "Thông báo", MessageBoxButtons.OK);
-                ShowNhanVien(NhanVienController.GetNhanVien());
-            }
-            catch
-            {
-                MessageBox.Show("Ngu\r\n", "Thông báo", MessageBoxButtons.OK);
-                ShowNhanVien(NhanVienController.GetNhanVien());
-            }            
-        }
     }
 }

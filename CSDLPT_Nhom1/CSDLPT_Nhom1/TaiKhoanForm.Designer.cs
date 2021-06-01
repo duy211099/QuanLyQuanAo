@@ -44,8 +44,13 @@ namespace CSDLPT_Nhom1
             this.label4 = new System.Windows.Forms.Label();
             this.btnTao = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lvwNVTK = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,42 +184,72 @@ namespace CSDLPT_Nhom1
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
-            // btnXoa
+            // lvwNVTK
             // 
-            this.btnXoa.Location = new System.Drawing.Point(472, 186);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(106, 23);
-            this.btnXoa.TabIndex = 12;
-            this.btnXoa.Text = "Xóa tài khoản";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Visible = false;
-            this.btnXoa.Click += new System.EventHandler(this.button1_Click);
+            this.lvwNVTK.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader6,
+            this.columnHeader9,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.lvwNVTK.HideSelection = false;
+            this.lvwNVTK.Location = new System.Drawing.Point(15, 276);
+            this.lvwNVTK.Name = "lvwNVTK";
+            this.lvwNVTK.Size = new System.Drawing.Size(583, 229);
+            this.lvwNVTK.TabIndex = 14;
+            this.lvwNVTK.UseCompatibleStateImageBehavior = false;
+            this.lvwNVTK.View = System.Windows.Forms.View.Details;
             // 
-            // button2
+            // columnHeader4
             // 
-            this.button2.Location = new System.Drawing.Point(584, 186);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Chuyển Chi Nhánh";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.columnHeader4.Text = "Mã NV";
+            this.columnHeader4.Width = 80;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Họ Tên";
+            this.columnHeader6.Width = 200;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Chức Vụ";
+            this.columnHeader7.Width = 80;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Chi Nhánh";
+            this.columnHeader8.Width = 90;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 260);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Nhân viên đã có tài khoản:";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Tên tài khoản";
+            this.columnHeader9.Width = 84;
             // 
             // TaiKhoanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 270);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnXoa);
+            this.ClientSize = new System.Drawing.Size(721, 506);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lvwNVTK);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lvwNhanVien);
             this.Name = "TaiKhoanForm";
-            this.Text = "TaiKhoanForm";
+            this.Text = "Tạo Tài Khoản";
             this.Load += new System.EventHandler(this.TaiKhoanForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -235,7 +270,12 @@ namespace CSDLPT_Nhom1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnTao;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView lvwNVTK;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -37,6 +37,12 @@ namespace CSDLPT_Nhom1
             ShowCategories();
             ShowSanPhams(ChiTietSanPhamController.GetSanPham());
 
+            if (WorkingContext.Instance.CurrentLoginInfo.RoleName == "NHANVIEN")
+            {
+                tàiKhoảnToolStripMenuItem.Enabled = false;
+                báoCáoToolStripMenuItem.Enabled = false;
+
+            }
         }
 
         private void ShowCategories()
@@ -207,8 +213,17 @@ namespace CSDLPT_Nhom1
 
         private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThongKeForm f = new ThongKeForm();
-            f.ShowDialog();
+
+            if (WorkingContext.Instance.CurrentLoginInfo.RoleName == "GIAMDOC")
+            {
+                ThongKeGiamDoc f = new ThongKeGiamDoc();
+                f.ShowDialog();
+            }
+            else
+            {
+                ThongKeForm f = new ThongKeForm();
+                f.ShowDialog();
+            }
         }
 
         private void tàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -221,6 +236,11 @@ namespace CSDLPT_Nhom1
         {
             CapNhatForm f = new CapNhatForm();
             f.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

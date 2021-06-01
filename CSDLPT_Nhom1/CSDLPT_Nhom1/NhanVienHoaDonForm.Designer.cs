@@ -109,7 +109,7 @@ namespace CSDLPT_Nhom1
             this.ClientSize = new System.Drawing.Size(822, 450);
             this.Controls.Add(this.groupBox2);
             this.Name = "NhanVienHoaDonForm";
-            this.Text = "NhanVienHoaDon";
+            this.Text = "Hóa Đơn Nhân Viên";
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 

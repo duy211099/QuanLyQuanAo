@@ -1,7 +1,0 @@
- CREATE OR ALTER PROCEDURE sp_GetAllNV 
-AS  
-  BEGIN  
-	SELECT * FROM LINK.CSDLPT.dbo.NhanVien
-  END
-
-EXEC sp_GetAllNV

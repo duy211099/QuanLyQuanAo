@@ -32,3 +32,4 @@ D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.ChiTietHoaDonFo
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.ThongKeForm.resources
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.TaiKhoanForm.resources
 D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.CapNhatForm.resources
+D:\learn\CSDLPT\CSDLPT_Nhom1\CSDLPT_Nhom1\obj\Debug\CSDLPT_Nhom1.ThongKeGiamDoc.resources

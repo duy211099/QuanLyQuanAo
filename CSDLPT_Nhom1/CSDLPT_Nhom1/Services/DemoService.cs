@@ -35,5 +35,22 @@ namespace CSDLPT_Nhom1.Service
 
             var ngu = dbContext.NhanViens.SqlQuery(query).ToList();
         }
+        public static void ChuyenTaiKhoan(string MaNV)
+        {
+            var dbContext = WorkingContext.Instance.GetDbContext();
+            string query = "EXEC sp_ChuyenChiNhanh @MaNV = " + MaNV;
+
+            var ngu = dbContext.Database.ExecuteSqlCommand(query);
+        }
+
+        public static List<T> Read_SP<T>(string sp_name)
+        {
+            var dbContext = WorkingContext.Instance.GetDbContext();
+            string query = "EXEC "+ sp_name;
+
+            var ngu = dbContext.Database.SqlQuery<T>(query).ToList();
+
+            return ngu;
+        }
     }
 }
